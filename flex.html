@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="first">Logo & Menu</div>
+        <div id="second">Secondary Menu</div>
+        <div id="third">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor sapien nulla, id placerat diam vestibulum quis. Aliquam accumsan sit amet ex non blandit. Nam commodo sem sit amet tristique tincidunt. Donec massa mauris, pharetra in tempus eu, accumsan tempor nisl. Pellentesque vel ante ante. Morbi feugiat magna ac risus imperdiet ultricies. Fusce libero erat, sagittis et mi sit amet, elementum pretium odio. Nullam tempor mauris cursus pharetra vulputate.</div>
+    </div>
+
+    <style>
+        #container div {
+            border: 1px solid black;
+            padding:1ex;
+        }
+        #container {
+            border:1px solid red;
+            display:grid;
+            grid-template-columns: 150px auto 50px;
+            grid-template-rows: 50px auto;
+            grid-template-areas: "menu   menu  menu"
+                                 "column main  main";
+        }
+        #first {
+            grid-area: menu;
+        }
+        #second {
+            grid-area: column;
+        }
+        #third {
+            grid-area: main;
+        }
+
+        @media (max-width: 550px) {
+
+            #container div {
+                padding:20px;
+            }
+
+        } /* end of media state */
+
+        @media (max-width: 350px) {
+
+            #container {
+                display:block;
+            }
+
+        } /* end of media state */
+
+    </style>
+
+</body>
+</html>
